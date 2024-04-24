@@ -152,6 +152,9 @@ hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치<br>
 ![figma](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F8a76fcce-a33f-41e0-a140-2158c540fa19%2F%25EC%25A3%25BC%25EC%25A3%25BC%25EC%25B4%259D%25ED%259A%258C_%25EC%2599%2580%25EC%259D%25B4%25EC%2596%25B4_%25ED%2594%2584%25EB%25A0%2588%25EC%259E%2584.png?table=block&id=f1771ec4-dfe3-4364-b522-afd3b40a7806&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=ca0c5ffb-e774-49d1-8001-e9462600093c&cache=v2)
 <p><br></p>
 
+## API 명세서
+https://www.notion.so/teamsparta/API-e911f1097fec482da163b140a69cfb6f
+
 ## 더보기
 + **서비스 사이트:** https://jujuassembly.store/
 + **Notion Page:** https://www.notion.so/teamsparta/5216eb8a22a5478990fdfe34b34988dd
