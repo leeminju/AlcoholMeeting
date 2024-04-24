@@ -153,7 +153,8 @@ hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치<br>
 <p><br></p>
 
 ## API 명세서
-https://www.notion.so/teamsparta/API-e911f1097fec482da163b140a69cfb6f
+[API Notion Page](https://www.notion.so/teamsparta/API-e911f1097fec482da163b140a69cfb6f)
+
 
 ## 더보기
 + **서비스 사이트:** https://jujuassembly.store/
