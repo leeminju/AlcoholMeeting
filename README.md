@@ -2,14 +2,15 @@
 <br>
 
 ## 📌 목차
-- [프로젝트 소개](#✅ 프로젝트 소개)
-- [팀원 소개](#👥 팀원 소개)
-- [기술 스택](#🚦 기술 스택)
-- [우리들의 약속](#🤝 우리들의 약속)
+- [프로젝트 소개](#✅-프로젝트-소개)
+- [서비스 아키텍쳐](#📋-서비스-아키텍쳐)
+- [팀원 소개](#👥-팀원-소개)
+- [기술 스택](#🚦-기술-스택)
+- [우리들의 약속](#🤝-우리들의-약속)
 - [ERD](#ERD)
 - [와이어프레임](#와이어프레임)
-- [서비스 사이트](#서비스 사이트)
-- [우리의 소통 흔적](#우리의 소통 흔적)
+- [서비스 사이트](#서비스-사이트)
+- [우리의 소통 흔적](#우리의-소통-흔적)
 
 
 <p><br></p>
@@ -29,12 +30,18 @@
 
 <p><br></p>
 
+## 📋 서비스 아키텍쳐
+<img width="1020" alt="서비스 아키텍쳐" src="https://github.com/leeminju/JuJuAssembly/assets/146754105/9cc4d7a4-9952-41d2-b953-d08bb1596b56">
+
+<p><br></p>
+
+
 ## 👥 팀원 및 구현기능 소개
 
 | |이민주|김재현|오수식|박연우|정영도|
 |-- |-----|----|----|----|-----|
 |링크 |[블로그](https://velog.io/@leemj4090/posts), [GitHub](https://github.com/leeminju?tab=repositories)| [블로그](https://velog.io/@jeiho/posts), [GitHub](https://github.com/k-jaehyun)|[블로그](https://velog.io/@tntlr92), [GitHub](https://github.com/susik2023)|[블로그](https://studymode.tistory.com/), [GitHub](https://github.com/yeonwoopark20231003)|[블로그](https://velog.io/@yeong_do/posts), [GitHub](https://github.com/yeongdo99)|
-|담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및<br> Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 카트<br>- 프로필 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
+|담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및<br> Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 관리자 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
 
 <p><br></p>
 
