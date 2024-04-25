@@ -40,7 +40,7 @@
 
 | |이민주|김재현|오수식|박연우|정영도|
 |-- |-----|----|----|----|-----|
-|링크 |[블로그](https://velog.io/@leemj4090/posts), [GitHub](https://github.com/leeminju?tab=repositories)| [블로그](https://velog.io/@jeiho/posts), [GitHub](https://github.com/k-jaehyun)|[블로그](https://velog.io/@tntlr92), [GitHub](https://github.com/susik2023)|[블로그](https://studymode.tistory.com/), [GitHub](https://github.com/yeonwoopark20231003)|[블로그](https://velog.io/@yeong_do/posts), [GitHub](https://github.com/yeongdo99)|
+|링크 |[Blog](https://velog.io/@leemj4090/posts), [GitHub](https://github.com/leeminju?tab=repositories)| [Blog](https://velog.io/@jeiho/posts), [GitHub](https://github.com/k-jaehyun)|[Blog](https://velog.io/@tntlr92), [GitHub](https://github.com/susik2023)|[Blog](https://studymode.tistory.com/), [GitHub](https://github.com/yeonwoopark20231003)|[Blog](https://velog.io/@yeong_do/posts), [Blog](https://github.com/yeongdo99)|
 |담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및 Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 관리자 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
 
 <p><br></p>
@@ -100,23 +100,21 @@ hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치<br> <br
 **feature로 각자 작업 후, dev에 merge!**
 
 3. **Git commit message rule**<br>
-<br>
-**소통에 적극 활용**
 
-| 작업 타입 | 작업내용 |
-| --- | --- |
-| ✨ update   | 해당 파일에 새로운 기능이 생김 |
-| feat | 기능 구현 |
-| 🎉 add | 없던 파일을 생성함, 초기 세팅 |
-| 🐛 bugfix | 버그 수정 |
-| ♻️ refactor | 코드 리팩토링 |
-| 🩹 fix | 코드 수정 |
-| 🚚 move | 파일 옮김/정리 |
-| 🔥 del | 기능/파일을 삭제 |
-| 🍻 test | 테스트 코드를 작성 |
-| 💄 style | css |
-| 🙈 gitfix | gitignore 수정 |
-| 🔨script | package.json 변경(npm 설치 등)git issue 활용 |
+    | 작업 타입 | 작업내용 |
+    | --- | --- |
+    | ✨ update   | 해당 파일에 새로운 기능이 생김 |
+    | feat | 기능 구현 |
+    | 🎉 add | 없던 파일을 생성함, 초기 세팅 |
+    | 🐛 bugfix | 버그 수정 |
+    | ♻️ refactor | 코드 리팩토링 |
+    | 🩹 fix | 코드 수정 |
+    | 🚚 move | 파일 옮김/정리 |
+    | 🔥 del | 기능/파일을 삭제 |
+    | 🍻 test | 테스트 코드를 작성 |
+    | 💄 style | css |
+    | 🙈 gitfix | gitignore 수정 |
+    | 🔨script | package.json 변경(npm 설치 등)git issue 활용 |
     
 <p><br></p>
 
