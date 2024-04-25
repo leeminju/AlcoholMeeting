@@ -41,7 +41,7 @@
 | |이민주|김재현|오수식|박연우|정영도|
 |-- |-----|----|----|----|-----|
 |링크 |[블로그](https://velog.io/@leemj4090/posts), [GitHub](https://github.com/leeminju?tab=repositories)| [블로그](https://velog.io/@jeiho/posts), [GitHub](https://github.com/k-jaehyun)|[블로그](https://velog.io/@tntlr92), [GitHub](https://github.com/susik2023)|[블로그](https://studymode.tistory.com/), [GitHub](https://github.com/yeonwoopark20231003)|[블로그](https://velog.io/@yeong_do/posts), [GitHub](https://github.com/yeongdo99)|
-|담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및<br> Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 관리자 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
+|담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및 Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 관리자 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
 
 <p><br></p>
 
