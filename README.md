@@ -2,11 +2,11 @@
 <br>
 
 ## 📌 목차
-- [프로젝트 소개](#✅-프로젝트-소개)
-- [서비스 아키텍쳐](#📋-서비스-아키텍쳐)
-- [팀원 소개](#👥-팀원-소개)
-- [기술 스택](#🚦-기술-스택)
-- [우리들의 약속](#🤝-우리들의-약속)
+- [프로젝트 소개](#프로젝트-소개)
+- [서비스 아키텍쳐](#서비스-아키텍쳐)
+- [팀원 및 구현기능 소개](#팀원-및-구현기능-소개)
+- [기술 스택](#기술-스택)
+- [우리들의 약속](#우리들의-약속)
 - [ERD](#ERD)
 - [와이어프레임](#와이어프레임)
 - [서비스 사이트](#서비스-사이트)
@@ -15,7 +15,8 @@
 
 <p><br></p>
 
-## ✅ 프로젝트 소개
+<h2 id="프로젝트-소개">✅ 프로젝트 소개</h2>
+
 **한 줄 정리**: 다양한 종류의 술들을 검색하고, 평점과 리뷰를 통해 원하는 상품을 찾을 수 있도록 도와주는 웹 서비스
 
 - 내용 :
@@ -30,22 +31,21 @@
 
 <p><br></p>
 
-## 📋 서비스 아키텍쳐
+<h2 id="서비스-아키텍쳐">📋 서비스 아키텍쳐</h2>
 <img width="1020" alt="서비스 아키텍쳐" src="https://github.com/leeminju/JuJuAssembly/assets/146754105/9cc4d7a4-9952-41d2-b953-d08bb1596b56">
 
 <p><br></p>
 
-
-## 👥 팀원 및 구현기능 소개
+<h2 id="팀원-및-구현기능-소개">👥 팀원 및 구현기능 소개</h2>
 
 | |이민주|김재현|오수식|박연우|정영도|
 |-- |-----|----|----|----|-----|
-|링크 |[블로그](https://velog.io/@leemj4090/posts), [GitHub](https://github.com/leeminju?tab=repositories)| [블로그](https://velog.io/@jeiho/posts), [GitHub](https://github.com/k-jaehyun)|[블로그](https://velog.io/@tntlr92), [GitHub](https://github.com/susik2023)|[블로그](https://studymode.tistory.com/), [GitHub](https://github.com/yeonwoopark20231003)|[블로그](https://velog.io/@yeong_do/posts), [GitHub](https://github.com/yeongdo99)|
-|담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및<br> Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 관리자 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
+|링크 |[Blog](https://velog.io/@leemj4090/posts), [GitHub](https://github.com/leeminju?tab=repositories)| [Blog](https://velog.io/@jeiho/posts), [GitHub](https://github.com/k-jaehyun)|[Blog](https://velog.io/@tntlr92), [GitHub](https://github.com/susik2023)|[Blog](https://studymode.tistory.com/), [GitHub](https://github.com/yeonwoopark20231003)|[Blog](https://velog.io/@yeong_do/posts), [Blog](https://github.com/yeongdo99)|
+|담당<br>기능 |- CI/CD 구축<br>- 도메인, HTTPS 적용<br>- 리뷰 기능<br>- Front 주도       |- [JWT 인증/인가](https://velog.io/@jeiho/240107) <br> - filter 및 Security<br>- [소셜로그인](https://velog.io/@jeiho/231128)<br>- [이메일 인증](https://velog.io/@jeiho/231221) | - 채팅 기능<br> (웹소켓) <br>- 주류 CRUD|- 주류 찜 기능<br>- 관리자 기능<br> - 리뷰/제보 이미지 수정 |- SSE 알림 기능<br>- 주류 CRUD |
 
 <p><br></p>
 
-## 🚦 기술 스택
+<h2 id="기술-스택">🚦 기술 스택</h2>
 
 ### 버전 관리 시스템 (VCS)
 - GitHub
@@ -79,7 +79,7 @@
   
 <p><br></p>
 
-## 🤝 우리들의 약속
+<h2 id="우리들의-약속">🤝 우리들의 약속</h2>
 
 ### Code Convention
 1. [구글 코드 포매터](https://withhamit.tistory.com/411)
@@ -100,23 +100,21 @@ hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치<br> <br
 **feature로 각자 작업 후, dev에 merge!**
 
 3. **Git commit message rule**<br>
-<br>
-**소통에 적극 활용**
 
-| 작업 타입 | 작업내용 |
-| --- | --- |
-| ✨ update   | 해당 파일에 새로운 기능이 생김 |
-| feat | 기능 구현 |
-| 🎉 add | 없던 파일을 생성함, 초기 세팅 |
-| 🐛 bugfix | 버그 수정 |
-| ♻️ refactor | 코드 리팩토링 |
-| 🩹 fix | 코드 수정 |
-| 🚚 move | 파일 옮김/정리 |
-| 🔥 del | 기능/파일을 삭제 |
-| 🍻 test | 테스트 코드를 작성 |
-| 💄 style | css |
-| 🙈 gitfix | gitignore 수정 |
-| 🔨script | package.json 변경(npm 설치 등)git issue 활용 |
+    | 작업 타입 | 작업내용 |
+    | --- | --- |
+    | ✨ update   | 해당 파일에 새로운 기능이 생김 |
+    | feat | 기능 구현 |
+    | 🎉 add | 없던 파일을 생성함, 초기 세팅 |
+    | 🐛 bugfix | 버그 수정 |
+    | ♻️ refactor | 코드 리팩토링 |
+    | 🩹 fix | 코드 수정 |
+    | 🚚 move | 파일 옮김/정리 |
+    | 🔥 del | 기능/파일을 삭제 |
+    | 🍻 test | 테스트 코드를 작성 |
+    | 💄 style | css |
+    | 🙈 gitfix | gitignore 수정 |
+    | 🔨script | package.json 변경(npm 설치 등)git issue 활용 |
     
 <p><br></p>
 
