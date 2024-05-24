@@ -5,6 +5,8 @@ import com.example.jujuassembly.global.exception.ApiException;
 import com.example.jujuassembly.global.mail.EmailService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
@@ -59,14 +61,16 @@ public class EmailAuthService {
   public void setSentCodeByLoginIdAtRedis(String loginId, String nickname, String email,
       String password, Long firstPreferredCategoryId, Long secondPreferredCategoryId,
       String sentCode) {
-    redisTemplate.opsForHash().put(loginId, "nickname", nickname);
-    redisTemplate.opsForHash().put(loginId, "email", email);
-    redisTemplate.opsForHash().put(loginId, "password", password);
-    redisTemplate.opsForHash()
-        .put(loginId, "firstPreferredCategoryId", firstPreferredCategoryId.toString());
-    redisTemplate.opsForHash()
-        .put(loginId, "secondPreferredCategoryId", secondPreferredCategoryId.toString());
-    redisTemplate.opsForHash().put(loginId, "sentCode", sentCode);
+
+    Map<String, String> tempUserInfo = new HashMap<>();
+    tempUserInfo.put("nickname", nickname);
+    tempUserInfo.put("email", email);
+    tempUserInfo.put("password", password);
+    tempUserInfo.put("firstPreferredCategoryId", firstPreferredCategoryId.toString());
+    tempUserInfo.put("secondPreferredCategoryId", secondPreferredCategoryId.toString());
+    tempUserInfo.put("sentCode", sentCode);
+
+    redisTemplate.opsForHash().putAll(loginId, tempUserInfo);
     redisTemplate.expire(loginId, 5 * 60, TimeUnit.SECONDS);
   }
 
