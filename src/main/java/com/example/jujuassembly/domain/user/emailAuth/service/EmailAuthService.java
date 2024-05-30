@@ -1,16 +1,14 @@
 package com.example.jujuassembly.domain.user.emailAuth.service;
 
 import com.example.jujuassembly.domain.user.emailAuth.dto.EmailAuthDto;
+import com.example.jujuassembly.domain.user.emailAuth.entity.EmailAuth;
+import com.example.jujuassembly.domain.user.emailAuth.repository.EmailAuthRepository;
 import com.example.jujuassembly.global.exception.ApiException;
 import com.example.jujuassembly.global.mail.EmailService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -20,7 +18,7 @@ import org.springframework.stereotype.Service;
 public class EmailAuthService {
 
   private final EmailService emailService;
-  private final RedisTemplate<String, String> redisTemplate;
+  private final EmailAuthRepository emailAuthRepository;
 
   public static final String LOGIN_ID_AUTHORIZATION_HEADER = "LoginIdAuth";
   public static final String VERIFICATION_CODE_HEADER = "VerificationCode";
@@ -31,47 +29,30 @@ public class EmailAuthService {
    **/
   public EmailAuthDto checkVerifyVerificationCode(String loginId, String verificationCode) {
 
-    if (Boolean.FALSE.equals(redisTemplate.hasKey(loginId))) {
+    if (!emailAuthRepository.isEmailAuthPresent(loginId)) {
       throw new ApiException("인증 시간이 만료되었습니다.", HttpStatus.GONE);
     }
-    String nickname = (String) redisTemplate.opsForHash().get(loginId, "nickname");
-    String email = (String) redisTemplate.opsForHash().get(loginId, "email");
-    String password = (String) redisTemplate.opsForHash().get(loginId, "password");
-    Long firstPreferredCategoryId = Long.parseLong(
-        (String) redisTemplate.opsForHash().get(loginId, "firstPreferredCategoryId"));
-    Long secondPreferredCategoryId = Long.parseLong(
-        (String) redisTemplate.opsForHash().get(loginId, "secondPreferredCategoryId"));
-    String sentCode = (String) redisTemplate.opsForHash().get(loginId, "sentCode");
+
+    EmailAuth emailAuth = emailAuthRepository.getEmailAuth(loginId);
+    String sentCode = emailAuth.getSentCode();
 
     // 인증번호 일치하는지 확인
     if (!sentCode.equals(verificationCode)) {
       throw new ApiException("인증번호가 일치하지 않습니다.", HttpStatus.BAD_REQUEST);
     }
 
-    return new EmailAuthDto(loginId, nickname, email, password, firstPreferredCategoryId,
-        secondPreferredCategoryId);
+    return new EmailAuthDto(emailAuth);
   }
 
   public void concludeEmailAuthentication(String loginId) {
     // 인증 정보 삭제
-    redisTemplate.delete(loginId);
+    emailAuthRepository.deleteEmailAuth(loginId);
   }
 
   @Async
-  public void setSentCodeByLoginIdAtRedis(String loginId, String nickname, String email,
-      String password, Long firstPreferredCategoryId, Long secondPreferredCategoryId,
-      String sentCode) {
-
-    Map<String, String> tempUserInfo = new HashMap<>();
-    tempUserInfo.put("nickname", nickname);
-    tempUserInfo.put("email", email);
-    tempUserInfo.put("password", password);
-    tempUserInfo.put("firstPreferredCategoryId", firstPreferredCategoryId.toString());
-    tempUserInfo.put("secondPreferredCategoryId", secondPreferredCategoryId.toString());
-    tempUserInfo.put("sentCode", sentCode);
-
-    redisTemplate.opsForHash().putAll(loginId, tempUserInfo);
-    redisTemplate.expire(loginId, 5 * 60, TimeUnit.SECONDS);
+  public void setSentCodeByLoginIdAtRedis(EmailAuth emailAuth) {
+    String loginId = emailAuth.getLoginId();
+    emailAuthRepository.saveEmailAuth(loginId, emailAuth);
   }
 
   public String sendVerificationCode(String email) {

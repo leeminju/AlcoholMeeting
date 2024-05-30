@@ -6,6 +6,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doNothing;
 
 import com.example.jujuassembly.domain.user.emailAuth.dto.EmailAuthDto;
+import com.example.jujuassembly.domain.user.emailAuth.entity.EmailAuth;
 import com.example.jujuassembly.domain.user.emailAuth.service.EmailAuthService;
 import com.example.jujuassembly.global.EmailAuthUtil;
 import com.example.jujuassembly.global.mail.EmailService;
@@ -38,10 +39,11 @@ class EmailAuthServiceTest implements EmailAuthUtil {
     Long firstPreferredCategoryId = TEST_CATEGORY_ID;
     Long secondPreferredCategoryId = TEST_ANOTHER_CATEGORY_ID;
 
+    EmailAuth testEmailAuth = new EmailAuth(loginId, nickname, email, password,
+        firstPreferredCategoryId, secondPreferredCategoryId, TEST_SENT_CODE);
+
     // when
-    EmailAuthDto result = new EmailAuthDto(loginId, nickname, email, password,
-        firstPreferredCategoryId,
-        secondPreferredCategoryId);
+    EmailAuthDto result = new EmailAuthDto(testEmailAuth);
 
     // then
     assertEquals(result.getLoginId(), TEST_USER_LOGINID);
