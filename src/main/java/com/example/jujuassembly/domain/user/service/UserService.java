@@ -2,13 +2,14 @@ package com.example.jujuassembly.domain.user.service;
 
 import com.example.jujuassembly.domain.category.entity.Category;
 import com.example.jujuassembly.domain.category.repository.CategoryRepository;
-import com.example.jujuassembly.domain.user.emailAuth.dto.EmailAuthDto;
-import com.example.jujuassembly.domain.user.emailAuth.service.EmailAuthService;
 import com.example.jujuassembly.domain.user.dto.LoginRequestDto;
 import com.example.jujuassembly.domain.user.dto.SignupRequestDto;
 import com.example.jujuassembly.domain.user.dto.UserDetailResponseDto;
 import com.example.jujuassembly.domain.user.dto.UserModifyRequestDto;
 import com.example.jujuassembly.domain.user.dto.UserResponseDto;
+import com.example.jujuassembly.domain.user.emailAuth.dto.EmailAuthDto;
+import com.example.jujuassembly.domain.user.emailAuth.entity.EmailAuth;
+import com.example.jujuassembly.domain.user.emailAuth.service.EmailAuthService;
 import com.example.jujuassembly.domain.user.entity.User;
 import com.example.jujuassembly.domain.user.repository.UserRepository;
 import com.example.jujuassembly.global.exception.ApiException;
@@ -77,10 +78,12 @@ public class UserService {
     // 인증번호 메일 보내기
     String sentCode = emailAuthService.sendVerificationCode(email);
 
-    // redis에 저장하여 5분 내로 인증하도록 설정
-    emailAuthService.setSentCodeByLoginIdAtRedis(loginId, nickname, email,
+    EmailAuth emailAuth = new EmailAuth(loginId, nickname, email,
         passwordEncoder.encode(password), firstPreferredCategoryId, secondPreferredCategoryId,
         sentCode);
+
+    // redis에 저장하여 5분 내로 인증하도록 설정
+    emailAuthService.setSentCodeByLoginIdAtRedis(emailAuth);
 
   }
 

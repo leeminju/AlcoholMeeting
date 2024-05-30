@@ -20,6 +20,7 @@ import com.example.jujuassembly.domain.user.dto.UserDetailResponseDto;
 import com.example.jujuassembly.domain.user.dto.UserModifyRequestDto;
 import com.example.jujuassembly.domain.user.dto.UserResponseDto;
 import com.example.jujuassembly.domain.user.emailAuth.dto.EmailAuthDto;
+import com.example.jujuassembly.domain.user.emailAuth.entity.EmailAuth;
 import com.example.jujuassembly.domain.user.emailAuth.service.EmailAuthService;
 import com.example.jujuassembly.domain.user.entity.User;
 import com.example.jujuassembly.domain.user.entity.UserRoleEnum;
@@ -95,9 +96,10 @@ public class UserServiceTest implements EmailAuthUtil {
   @Test
   void verificateCodeTest() {
     // given
-    EmailAuthDto emailAuthDto = new EmailAuthDto(TEST_USER_LOGINID, TEST_USER_NICKNAME,
+    EmailAuth testEmailAuth = new EmailAuth(TEST_USER_LOGINID, TEST_USER_NICKNAME,
         TEST_USER_EMAIL,
-        TEST_USER_PASSWORD, TEST_CATEGORY_ID, TEST_ANOTHER_CATEGORY_ID);
+        TEST_USER_PASSWORD, TEST_CATEGORY_ID, TEST_ANOTHER_CATEGORY_ID, TEST_SENTCODE);
+    EmailAuthDto emailAuthDto = new EmailAuthDto(testEmailAuth);
     String loginId = TEST_USER_LOGINID;
 
     // when-then

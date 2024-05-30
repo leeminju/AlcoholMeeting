@@ -17,6 +17,8 @@ public interface UserTestUtil extends CategoryTestUtil {
   Category TEST_USER_FIRSTPREFERRED_CATEGORY = TEST_CATEGORY;
   Category TEST_USER_SECONDPREFERRED_CATEGORY = TEST_ANOTHER_CATEGORY;
 
+  String TEST_SENT_CODE = "test sentCode";
+
   User TEST_USER = User.builder()
       .id(TEST_USER_ID)
       .loginId(TEST_USER_LOGINID)
@@ -31,10 +33,10 @@ public interface UserTestUtil extends CategoryTestUtil {
 
   User TEST_ANOTHER_USER = User.builder()
       .id(TEST_ANOTHER_USER_ID)
-      .loginId(ANOTHER_PREDIX+TEST_USER_LOGINID)
-      .nickname(ANOTHER_PREDIX+TEST_USER_NICKNAME)
-      .email(ANOTHER_PREDIX+TEST_USER_EMAIL)
-      .password(ANOTHER_PREDIX+TEST_USER_PASSWORD)
+      .loginId(ANOTHER_PREDIX + TEST_USER_LOGINID)
+      .nickname(ANOTHER_PREDIX + TEST_USER_NICKNAME)
+      .email(ANOTHER_PREDIX + TEST_USER_EMAIL)
+      .password(ANOTHER_PREDIX + TEST_USER_PASSWORD)
       .isArchived(false)
       .role(UserRoleEnum.USER)
       .firstPreferredCategory(TEST_USER_FIRSTPREFERRED_CATEGORY)
