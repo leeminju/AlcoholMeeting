@@ -128,7 +128,7 @@ hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치<br> <br
 <p><br></p>
 
 ## API 명세서
-[API명세서 Notion Page](https://www.notion.so/API-005bcc46971c4189933691d8f698b660?pvs=4)
+[API명세서 Notion Page](https://chemical-mongoose-09b.notion.site/API-005bcc46971c4189933691d8f698b660)
 
 ## 서비스 사이트
 https://jujuassembly.store/
